@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dunok — BugTracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!--  звёздочки -->
+  <div class="stars"></div>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo-container">
+        <svg class="logo-svg" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="35" font-family="Arial, sans-serif" font-size="24" fill="#ff6b6b" stroke="#ff4d4d" stroke-width="1" filter="url(#glow)">
+            Dunok
+          </text>
+          <filter id="glow">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </svg>
+      </div>
+      <nav class="nav">
+
+  </header>
+
+  <main class="main container">
+    <section class="hero">
+      <h2>Найденные ошибки</h2>
+      <p>Кликните по карточке, чтобы увидеть подробности.</p>
+    </section>
+    <div class="bugs-grid" id="bugsContainer">
+    </div>
+  </main>
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle">Заголовок бага</h3>
+        <button class="close-btn" id="closeModal">&times;</button>
+      </div>
+      <div class="modal-body" id="modalContent">
+       
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
